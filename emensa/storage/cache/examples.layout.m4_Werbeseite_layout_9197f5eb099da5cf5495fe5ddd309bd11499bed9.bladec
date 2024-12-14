@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <title>Werbeseite</title>
+ <link rel="stylesheet" href="css/styling.css">
+ <meta charset="UTF-8">
+</head>
+<body>
+<header>
+ <div>
+ <?php echo $this->yieldContent('Header'); ?>
+ </div>
+ <br>
+ <hr color="mediumseagreen">
+ <div class="angemeldet_als">
+ <?php echo $this->yieldContent('angemeldet_als'); ?>
+ </div>
+</header>
+<div>
+ <?php echo $this->yieldContent('Bild1'); ?>
+</div>
+<div>
+ <?php echo $this->yieldContent('Beg'); ?>
+</div>
+<div>
+ <?php echo $this->yieldContent('haupt'); ?>
+</div>
+<div>
+ <?php echo $this->yieldContent('Ende'); ?>
+</div>
+
+<hr color="mediumseagreen">
+
+<footer>
+ <?php echo $this->yieldContent('fotter'); ?>
+</footer>
+
+</body>
+</html>

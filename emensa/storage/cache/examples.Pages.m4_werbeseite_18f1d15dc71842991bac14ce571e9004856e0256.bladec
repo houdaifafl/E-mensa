@@ -1,0 +1,74 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('Header'); ?>
+ <br>
+ <span><img src="/img/OLV.png" class="logo"></span>
+ <span class="ober">
+ <span class="oberschrift"><a href="#ankund">Ankündigung</a></span>
+ <span class="oberschrift"><a href="#speisen">Speisen</a></span>
+ <span class="oberschrift"><a href="#mensazahlen">Zahlen</a></span>
+ <span class="oberschrift"><a href="#kontakt">Kontakt</a></span>
+ <span class="oberschrift"><a href="#wichtigfueruns">Wichtig für uns</a></span>
+ </span>
+ <?php if($_SESSION['Anmeldung ok']==false): ?>
+ <button class="button" onclick="window.location.href='/anmeldung'">Anmeldung</button>
+ <?php else: ?>
+ <button class="button" onclick="window.location.href='/abmeldung'">Abmeldung</button>
+ <?php endif; ?>
+<?php $this->stopSection(); ?>
+<?php $this->startSection('Bild1'); ?>
+ <img src="/img/Design-uden-navn-23.png" class="centerpic">
+<?php $this->stopSection(); ?>
+
+<?php $this->startSection('angemeldet_als'); ?>
+ <?php if(isset($_SESSION['name']))echo "Angemeldet als ". $_SESSION['name']; ?>
+<?php $this->stopSection(); ?>
+<?php $this->startSection('Beg'); ?>
+ <h2 id="ankund">Bald gibt es Essen auch online :)</h2>
+ <p class="erstertext">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+<?php $this->stopSection(); ?>
+<?php $this->startSection('haupt'); ?>
+ <br>
+ <h2 id="speisen">Altayebs, die Sie erwarten</h2>
+ <table class="tabell">
+ <?php if(!empty($data)): ?>
+ <table>
+ <thead>
+ <tr>
+ <th>Name</th>
+ <th>Preis intern</th>
+ <th>Preis extern</th>
+ <th>Allergien</th>
+ <th>Bild</th>
+ </tr>
+ </thead>
+ <tbody>
+ <?php $__currentLoopData = $data; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $meal): $loop = $this->incrementLoopIndices();  ?>
+ <tr>
+ <td><?php echo \htmlentities($meal['name']??'', ENT_QUOTES, 'UTF-8', false); ?></td>
+ <td><?php echo \htmlentities($meal['preisintern']??'', ENT_QUOTES, 'UTF-8', false); ?>€</td>
+ <td><?php echo \htmlentities($meal['preisextern']??'', ENT_QUOTES, 'UTF-8', false); ?>€</td>
+ <td><?php echo \htmlentities($meal['Allergien']??'', ENT_QUOTES, 'UTF-8', false); ?></td>
+ <td><img class = "bildd" src="/img/gerichte/<?php echo \htmlentities($meal['bildname']??'', ENT_QUOTES, 'UTF-8', false); ?>"></td>
+ </tr>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </tbody>
+ </table>
+ <?php else: ?>
+ <p>Es sind keine Gerichte vorhanden</p>
+ <?php endif; ?>
+ </table>
+<?php $this->stopSection(); ?>
+<?php $this->startSection('Ende'); ?>
+ <br>
+ <h2 style="margin-left: 380px">Wir freuen uns auf Ihren Besuch!</h2>
+<?php $this->stopSection(); ?>
+<?php $this->startSection('fotter'); ?>
+ <span style="margin-right: 10px">&copy;E-Mensa GmbH</span>
+ <span style="margin-right: 10px">|</span>
+ <span style="margin-right: 10px">Nadeem&Michel</span>
+ <span style="margin-right: 10px">|</span>
+ <span class="oberschrift" id="kontakt">Impressum</span>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('examples.layout.m4_Werbeseite_layout'); } ?>

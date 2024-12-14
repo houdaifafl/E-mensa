@@ -1,0 +1,113 @@
+.content{
+    margin-left: 240px;
+    margin-right: 500px;
+}
+.ober{
+    border-style: solid;
+    padding:30px;
+    padding-top: 35px;
+    height: 5px;
+    margin-left: 30px;
+    border:1px solid black;
+}
+
+#grid-template{
+    display: grid;
+    grid-template-columns: 10% 50% 6%;
+    margin: 5px 0px 0px 70px;
+}
+
+.button{
+    margin-left: 600px;
+    margin-top: 25px;
+}
+
+.attribute{
+    color: darkgreen;
+}
+.mensa_logo{
+    border: 1px solid;
+    border-color: black;
+    width: 150px;
+    height: 70px;
+
+}
+
+
+table{
+    text-align: center;
+    border:1px solid black;
+
+
+}
+th,td{
+    text-align: center;
+    border:1px solid black;
+}
+th:nth-child(1), td:nth-child(1) {
+    width: 300px;
+}
+th:nth-child(5), td:nth-child(5) {
+    width: 150px;
+}
+
+
+
+.text1{
+    border: 1px solid;
+    width: 108%;
+    padding: 10px;
+}
+
+#m3{
+    padding-left: 20px;
+}
+#m4{
+    padding-left: 170px;
+}
+
+#m5{
+    padding-left: 170px;
+}
+.mail{
+    padding-left: 125px;
+}
+#email{
+    margin-left: 20px;
+
+}
+.news{
+    padding-left: 110px;
+}
+#newsletter{
+    margin-left: 20px;
+}
+#sub{
+    margin-left: 130px;
+}
+#lastlist{
+    margin-left: 130px;
+}
+liste{
+    margin-left: 140px;
+}
+.n1{
+    text-align: center;
+}
+.end{
+    text-align: center;
+}
+
+.bildd{
+    width: 140px;
+    height: 105px;
+}
+
+
+.angemeldet_als{
+    text-align: right;
+    font-weight: bold;
+    font-size: large;
+}
+
+

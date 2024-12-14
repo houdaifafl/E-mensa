@@ -1,0 +1,78 @@
+.content{
+    margin-left: 240px;
+    margin-right: 500px;
+}
+.navi{
+    border:1px solid black;
+    padding:30px;
+    padding-top: 35px;
+    height: 5px;
+    margin-left: 30px;
+    width: 100%;
+}
+.attribute{
+    color: darkgreen;
+}
+.mensa_logo{
+    border: 1px solid;
+    border-color: black;
+    width: 150px;
+    height: 70px;
+
+}
+#grid-template{
+    display: grid;
+    grid-template-columns: 10% 50%;
+    margin: 30px 0px 0px 70px;
+}
+.text1{
+    border: 1px solid;
+    width: 108%;
+    padding: 10px;
+}
+.menu{
+    border: 1px solid;
+    width: 108%;
+    text-align: center;
+}
+#m3{
+    padding-left: 20px;
+}
+#m4{
+    padding-left: 170px;
+}
+
+#m5{
+    padding-left: 170px;
+}
+.mail{
+    padding-left: 125px;
+}
+#email{
+    margin-left: 20px;
+
+}
+.news{
+    padding-left: 110px;
+}
+#newsletter{
+    margin-left: 20px;
+}
+#sub{
+    margin-left: 130px;
+}
+#lastlist{
+    margin-left: 130px;
+}
+liste{
+    margin-left: 140px;
+}
+.n1{
+    text-align: center;
+    border-top: 3px solid darkgreen;
+}
+.end{
+    text-align: center;
+}
+
+

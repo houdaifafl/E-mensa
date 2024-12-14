@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="de">
+<head>
+ <title>App Name - <?php echo $this->yieldContent('titel'); ?></title>
+</head>
+<body>
+<main>
+ <?php echo $this->yieldContent('titel'); ?>
+</main>
+<div>Hier steht was </div>
+</body>
+<footer>
+
+</footer>
+
+
+</html>
